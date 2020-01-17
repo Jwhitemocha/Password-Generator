@@ -1,3 +1,5 @@
+
+// Create Button to Generate Password
 function generate( length = 10 ){
     var uppercase = "ABCDEFGHIHJKLMNOPQRSTUVWXYZ";
     var lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -14,3 +16,13 @@ function generate( length = 10 ){
     }
 return password;
 }
+// Copy Button to Copy Generated password
+function copy() { 
+    var copyText = document.getElementById("password");
+    copy.Text.select();
+    copyText.setSelectionRange(0,99999);
+    document.execCommand("copy");
+    alert("Copied Password: " + copyText.value);
+}
+
+// Create Modifiers.
