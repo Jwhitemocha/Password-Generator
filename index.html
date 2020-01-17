@@ -4,10 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script> 
+        window.onload = function(){ 
+            var generateButton = document.querySelector("#generate");
+            generateButton.addEventListener("click", function(){ 
+                document.querySelector("#password").value = generate();
+            });
+        }
+        </script>
 </head>
 <body>
-    <h1> Week 3 Homework : Password Generator!</h1>
     
+    <nav class="navbar navbar-dark bg-dark"> 
+        <a class="navbar-brand" href="#">Randomized Password Generator!</a>
+    </nav>
+    
+    <div class="container"> 
+
+        <div class="row"> 
+
+            <div class=".col-lg-8.col-sm-12">
+            
+                    <div class="userInterface">
+                        <h1> PW Generator </h1>
+                        <br>
+                        <input id ="password" type="text" placeholder="Your Password..">
+                        <br>
+                        <button id="generate">Create PW</button>
+                        <button onclick="">Copy PW</button>
+                        <br>
+                        <input type="radio" name="options" value="lowercase"> Lowercase Letters<br>
+                        <input type="radio" name="options" value="uppercase"> Uppercase Letters<br>
+                        <input type="radio" name="options" value="special"> Special Characters<br>
+                        <input type="radio" name="options" value="numbers"> Numbers<br>
+                    </div>
+        
+
+
+
+            </div>
+        </div>
+    
+    </div>
 </body>
 </html>
