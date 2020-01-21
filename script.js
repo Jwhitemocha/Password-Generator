@@ -1,28 +1,20 @@
 
-// Create Button to Generate Password
-function generate( length = 10 ){
-    var uppercase = "ABCDEFGHIHJKLMNOPQRSTUVWXYZ";
-    var lowercase = "abcdefghijklmnopqrstuvwxyz";
-    var numbers = "01234566789";
-    var special = "!@#$%^&*()_+-={}[]:<>";
+// Create Const for ID's
+const resultEl = document.getElementById("result");
+const lengthEL = document.getElementById("length");
+const uppercaseEl = document.getElementById("uppercase");
+const lowercaseEl = document.getElementById("lowercase");
+const numbersEl = document.getElementById("numbers");
+const specialEl = document.getElementById("special");
+const generateEl = document.getElementById("generate");
+const clipboard = document.getElementById("clipboard");
 
-    var all = uppercase + lowercase + numbers + special;
-
-    var password = "";
-
-    for (var index = 0; index < length; index++) { 
-        var character = Math.floor(Math.random() * all.length);
-        password += all.substring(character, character + 1);
-    }
-return password;
-}
-// Copy Button to Copy Generated password
-function copy() { 
-    var copyText = document.getElementById("password");
-    copy.Text.select();
-    copyText.setSelectionRange(0,99999);
-    document.execCommand("copy");
-    alert("Copied Password: " + copyText.value);
+const randomFunction = { 
+    lower: getRandomLower, 
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    special: getRandomSpecial
 }
 
-// Create Modifiers.
+
+
