@@ -5,29 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Password Generator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script> 
-        window.onload = function(){ 
-            var generateButton = document.querySelector("#generate");
-            generateButton.addEventListener("click", function(){ 
-                document.querySelector("#password").value = generate();
-            });
-        }
-        </script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/3da1a747b2.js"
+            crossorigin="anonymous">
+    </script>
 </head>
 <body>
-    
-    <nav class="navbar navbar-dark bg-dark"> 
-        <a class="navbar-brand" href="#">Randomized Password Generator!</a>
-    </nav>
+   
     
 <div class="container"> 
-    <h1>Password Generator</h1>
+    <h1>Random Password Generator</h1>
     <div class="result-container">
         <span id="result"></span>
-        <button class="btn" id="clipboard">
+        <button id="clipboard" class="btn">
             <i class="far fa-clipboard"></i>
         </button>
     </div>
@@ -42,7 +34,7 @@
         </div> 
         <div class = "custom"> 
             <label> Lowercase Letters</label>
-            <input type="checkbox" id="uppercase" checked />
+            <input type="checkbox" id="lowercase" checked />
         </div>
         <div class = "custom"> 
             <label>Numbers</label> 
@@ -52,7 +44,10 @@
             <label>Special Characaters</label>
             <input type="checkbox" id="special" checked />
         </div>
-    <button class="btn btn-large dg-dark" id="generate"> Create Password</button>
+    <button class="btn btn-large" id="generate"> Create Password</button>
 </div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
